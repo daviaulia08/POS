@@ -8,3 +8,12 @@ Route::get('/', function () {
 });
 
 Route::get('/', [HomeController::class, 'index']);
+
+use App\Http\Controllers\ProductController;
+
+Route::prefix('category')->group(function () {
+    Route::get('/food-beverage', [ProductController::class,'food']);
+    Route::get('/beauty-health', [ProductController::class,'beauty']);
+    Route::get('/home-care', [ProductController::class,'home']);
+    Route::get('/baby-kid', [ProductController::class,'baby']);
+});
