@@ -17,3 +17,7 @@ Route::prefix('category')->group(function () {
     Route::get('/home-care', [ProductController::class,'home']);
     Route::get('/baby-kid', [ProductController::class,'baby']);
 });
+
+use App\Http\Controllers\UserController;
+
+Route::get('/user/{id}/name/{name}', [UserController::class,'profile']);
