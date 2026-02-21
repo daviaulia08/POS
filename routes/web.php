@@ -21,3 +21,7 @@ Route::prefix('category')->group(function () {
 use App\Http\Controllers\UserController;
 
 Route::get('/user/{id}/name/{name}', [UserController::class,'profile']);
+
+use App\Http\Controllers\SalesController;
+
+Route::get('/sales', [SalesController::class,'index']);
